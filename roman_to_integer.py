@@ -17,15 +17,3 @@ def romanToInt(s: str) -> int:
     res += d[s[-1]]
     return res
 
-if __name__ == "__main__":
-    print(romanToInt(input()[1:-1]))
-
-def test_first():
-    res = romanToInt("III")
-    assert 3
-def test_second():
-    res = romanToInt("LVIII")
-    assert 58
-def test_third():
-    res = romanToInt("MCMXCIV")
-    assert 1994
