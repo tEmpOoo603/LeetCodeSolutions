@@ -2,6 +2,7 @@ from roman_to_integer import romanToInt
 from longest_common_prefix import longestCommonPrefix
 from valid_parentheses import isValid
 from remove_duplicates_from_sorted_array_II import removeDuplicates
+from valid_palindrome import isPalindrome
 
 """roman_to_integer"""
 def test1_romanToInt():
@@ -54,3 +55,14 @@ def test2_remove_duplicates_from_sorted_array_II():
 def test3_remove_duplicates_from_sorted_array_II():
     res = removeDuplicates([0,0,0,0])
     assert [0,0]
+
+"""valid_palindrome"""
+def test1_valid_palindrome():
+    res = isPalindrome("A man, a plan, a canal: Panama")
+    assert res == True
+def test2_valid_palindrome():
+    res = isPalindrome("race a car")
+    assert res == False
+def test3_valid_palindrome():
+    res = isPalindrome(" ")
+    assert res == True
