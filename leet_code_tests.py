@@ -3,7 +3,7 @@ from longest_common_prefix import longestCommonPrefix
 from valid_parentheses import isValid
 from remove_duplicates_from_sorted_array_II import removeDuplicates
 from valid_palindrome import isPalindrome
-
+from minimum_size_subarray_sum import minSubArrayLen
 """roman_to_integer"""
 def test1_romanToInt():
     res = romanToInt("III")
@@ -66,3 +66,20 @@ def test2_valid_palindrome():
 def test3_valid_palindrome():
     res = isPalindrome(" ")
     assert res == True
+
+"""minimum_size_subarray_sum"""
+def test1_minimum_size_subarray_sum():
+    res = minSubArrayLen(7, [2,3,1,2,4,3])
+    assert res == 2
+def test2_minimum_size_subarray_sum():
+    res = minSubArrayLen(4, [1,4,4])
+    assert res == 1
+def test3_minimum_size_subarray_sum():
+    res = minSubArrayLen(11, [1,1,1,1,1,1,1,1])
+    assert res == 0
+def test4_minimum_size_subarray_sum():
+    res = minSubArrayLen(15, [5,1,3,5,10,7,4,9,2,8])
+    assert res == 2
+def test5_minimum_size_subarray_sum():
+    res = minSubArrayLen(7, [8])
+    assert res == 1
